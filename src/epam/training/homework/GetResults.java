@@ -1,11 +1,13 @@
 package epam.training.homework;
 
 import epam.training.homework.dynamicarray.DynamicArrayTesting;
+import epam.training.homework.linkedlist.MyLinkedListTesting;
 import epam.training.homework.service.StudentsList;
 
 public class GetResults {
     StudentsList studentsList = new StudentsList();
     DynamicArrayTesting dynamicArrayTesting = new DynamicArrayTesting();
+    MyLinkedListTesting myLinkedListTesting = new MyLinkedListTesting();
 
     public void printResults() {
         System.out.println("-----Students sorted by first name-----");
@@ -20,5 +22,7 @@ public class GetResults {
         System.out.println("-----Testing dynamic array-----");
         dynamicArrayTesting.createArray();
 
+        System.out.println("-----Testing Linked list-----");
+        myLinkedListTesting.createMyLinkedList();
     }
 }
