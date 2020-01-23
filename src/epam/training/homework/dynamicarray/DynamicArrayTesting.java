@@ -4,7 +4,7 @@ import epam.training.homework.Student;
 import epam.training.homework.service.StudentsList;
 
 public class DynamicArrayTesting {
-    StudentsList studentsList = new StudentsList();
+    final StudentsList studentsList = new StudentsList();
 
     public void createArray() {
 

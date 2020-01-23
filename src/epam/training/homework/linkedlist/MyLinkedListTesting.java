@@ -3,7 +3,7 @@ package epam.training.homework.linkedlist;
 import epam.training.homework.service.StudentsList;
 
 public class MyLinkedListTesting {
-    StudentsList studentsList = new StudentsList();
+    final StudentsList studentsList = new StudentsList();
 
     public void createMyLinkedList() {
 

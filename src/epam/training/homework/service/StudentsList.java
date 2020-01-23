@@ -9,11 +9,11 @@ import java.util.*;
 public class StudentsList {
 
     /*creating student objects*/
-    public Student student1 = new Student("Aram", "Gabrielyan", 21);
-    public Student student2 = new Student("Gayane", "Zakoyan", 19);
-    public Student student3 = new Student("Ani", "Simonyan", 15);
-    public Student student4 = new Student("Grigor", "Harutyunyan", 30);
-    public Student student5 = new Student("Elen", "Mnacakanyan", 46);
+    public final Student student1 = new Student("Aram", "Gabrielyan", 21);
+    public final Student student2 = new Student("Gayane", "Zakoyan", 19);
+    public final Student student3 = new Student("Ani", "Simonyan", 15);
+    public final Student student4 = new Student("Grigor", "Harutyunyan", 30);
+    public final Student student5 = new Student("Elen", "Mnacakanyan", 46);
 
     /*create students list*/
     List<Student> studentsList = new ArrayList<>() {{

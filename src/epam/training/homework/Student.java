@@ -1,8 +1,8 @@
 package epam.training.homework;
 
 public class Student implements Comparable<Student> {
-    String firstName;
-    String lastName;
+    final String firstName;
+    final String lastName;
     int age;
 
     public Student(String firstName, String lastName, int age) {
