@@ -2,7 +2,7 @@ package epam.training.homework;
 
 public class Test {
     public static void main(String[] args) {
-        GetResults getResults = new GetResults();
+        Results getResults = new Results();
         getResults.printResults();
     }
 }

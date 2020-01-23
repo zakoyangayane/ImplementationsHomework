@@ -1,6 +1,6 @@
 package epam.training.homework.service;
 
-import epam.training.homework.AgeComparator;
+import epam.training.homework.AgeDescendingComparator;
 import epam.training.homework.FirstNameComparator;
 import epam.training.homework.Student;
 
@@ -41,7 +41,7 @@ public class StudentsList {
 
     /*get sorted list of students by age*/
     public void sortByAge() {
-        Collections.sort(studentsList, new AgeComparator().reversed());
+        Collections.sort(studentsList, new AgeDescendingComparator());
         printList(studentsList);
     }
 
