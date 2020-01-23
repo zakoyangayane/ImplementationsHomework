@@ -33,11 +33,14 @@ public class MyLinkedList {
 
     /*removes and returns the first student of the list*/
     public Student pop() {
-        first.next.previous = null;
-        Student theFirst = first.current;
-        first = first.next;
-        listSize--;
-        return theFirst;
+        if (listSize != 0) {
+            first.next.previous = null;
+            Student theFirst = first.current;
+            first = first.next;
+            listSize--;
+            return theFirst;
+        }
+        return null;
     }
 
     /*appends the specified student to the end of the list*/
@@ -55,11 +58,14 @@ public class MyLinkedList {
 
     /*removes and returns the last student*/
     public Student removeLast() {
-        last.previous.next = null;
-        Student theLast = last.current;
-        last = null;
-        listSize--;
-        return theLast;
+        if (listSize != 0) {
+            last.previous.next = null;
+            Student theLast = last.current;
+            last = null;
+            listSize--;
+            return theLast;
+        }
+        return null;
     }
 
     /*returns the number of students in this list*/

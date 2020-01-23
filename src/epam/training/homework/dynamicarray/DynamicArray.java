@@ -32,6 +32,9 @@ public class DynamicArray {
     /*removes the first occurrence of the specified student from
     the array if present. Returns true, if succeeds, and false otherwise*/
     public boolean remove(Student student) {
+        if (student == null) {
+            return false;
+        }
         for (Student s : this.students) {
             if (s.equals(student)) {
                 Student[] newArray = new Student[this.students.length - 1];
@@ -59,13 +62,16 @@ public class DynamicArray {
 
     /*gives the size of the array*/
     public int size() {
-        return this.students.length;
+        if (this.students != null) {
+            return this.students.length;
+        }
+        return 0;
     }
 
     /*gives the element at a current index, and null if the student
     doesn't exist in the array*/
     public Student get(int index) {
-        if (this.students.length > index) {
+        if (this.students != null && this.students.length > index) {
             return this.students[index];
         }
         return null;
