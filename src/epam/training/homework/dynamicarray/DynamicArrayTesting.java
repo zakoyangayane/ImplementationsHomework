@@ -18,12 +18,26 @@ public class DynamicArrayTesting {
         dynamicArray.add(studentsList.student3);
         System.out.println("size is " + dynamicArray.size());     //print size
 
+        //print the array
+        System.out.println("All students now in the dynamic array:");
+        dynamicArray.printInfo(dynamicArray);
+
         //remove an element
         dynamicArray.remove(studentsList.student2);
         System.out.println("size is " + dynamicArray.size());     //print size
 
-        //add elements
+        //print the array
+        System.out.println("All students now in the dynamic array:");
+        dynamicArray.printInfo(dynamicArray);
+
+        //add an element
         dynamicArray.add(studentsList.student4);
+
+        //print the array
+        System.out.println("All students now in the dynamic array:");
+        dynamicArray.printInfo(dynamicArray);
+
+        //add an element
         System.out.println(dynamicArray.add(studentsList.student5));
 
         //get element at specified index
@@ -32,9 +46,7 @@ public class DynamicArrayTesting {
 
         //print the array
         System.out.println("All students now in the dynamic array:");
-        for (int i = 0; i < dynamicArray.size(); i++) {
-            System.out.println(dynamicArray.get(i));
-        }
+        dynamicArray.printInfo(dynamicArray);
         System.out.println();
     }
 }

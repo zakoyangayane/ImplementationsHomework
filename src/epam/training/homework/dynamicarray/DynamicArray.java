@@ -17,16 +17,25 @@ public class DynamicArray {
             this.students[0] = student;
             return true;
         }
-        Student[] newArray = new Student[this.students.length + 1];
-        for (int i = 0; i < this.students.length; i++) {
-            newArray[i] = this.students[i];
+        if (this.students[this.students.length - 1] != null) {
+            Student[] newArray = new Student[this.students.length * 2];
+            for (int i = 0; i < this.students.length; i++) {
+                newArray[i] = this.students[i];
+            }
+            newArray[this.students.length] = student;
+            this.students = new Student[newArray.length];
+            for (int i = 0; i < newArray.length; i++) {
+                this.students[i] = newArray[i];
+            }
+        } else {
+            for (int i = 0; i < this.students.length; i++) {
+                if (this.students[i] == null) {
+                    this.students[i] = student;
+                    break;
+                }
+            }
         }
-        newArray[newArray.length - 1] = student;
-        this.students = new Student[newArray.length];
-        for (int i = 0; i < newArray.length; i++) {
-            this.students[i] = newArray[i];
-        }
-        return this.students[this.students.length - 1].equals(student);
+        return true;
     }
 
     /*removes the first occurrence of the specified student from
@@ -40,7 +49,7 @@ public class DynamicArray {
                 Student[] newArray = new Student[this.students.length - 1];
                 boolean removed = true;
                 for (int i = 0; i < this.students.length; i++) {
-                    if (this.students[i].equals(student) && removed) {
+                    if (this.students[i] != null && this.students[i].equals(student) && removed) {
                         removed = false;
                         continue;
                     }
@@ -75,5 +84,13 @@ public class DynamicArray {
             return this.students[index];
         }
         return null;
+    }
+
+    public void printInfo(DynamicArray dynamicArray) {
+        for (int i = 0; i < dynamicArray.size(); i++) {
+            if (dynamicArray.get(i) != null) {
+                System.out.println(dynamicArray.get(i));
+            }
+        }
     }
 }
