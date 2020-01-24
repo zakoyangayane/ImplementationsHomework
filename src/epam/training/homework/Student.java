@@ -29,7 +29,7 @@ public class Student implements Comparable<Student> {
 
     @Override
     public int compareTo(Student s) {
-        return this.getLastName().compareTo(s.getLastName());
+        return this.getLastName().compareToIgnoreCase(s.getLastName());
     }
 
     @Override
