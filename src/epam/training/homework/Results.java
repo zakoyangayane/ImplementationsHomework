@@ -2,22 +2,22 @@ package epam.training.homework;
 
 import epam.training.homework.dynamicarray.DynamicArrayTesting;
 import epam.training.homework.linkedlist.MyLinkedListTesting;
-import epam.training.homework.service.StudentsList;
+import epam.training.homework.service.StudentService;
 
 public class Results {
-    StudentsList studentsList = new StudentsList();
+    StudentService studentService = new StudentService();
     DynamicArrayTesting dynamicArrayTesting = new DynamicArrayTesting();
     MyLinkedListTesting myLinkedListTesting = new MyLinkedListTesting();
 
     public void printResults() {
         System.out.println("-----Students sorted by first name-----");
-        studentsList.sortByFirstName();
+        studentService.sortByFirstName();
 
         System.out.println("-----Students sorted by age-----");
-        studentsList.sortByAge();
+        studentService.sortByAge();
 
         System.out.println("-----Students sorted by last name-----");
-        studentsList.sortByLastName();
+        studentService.sortByLastName();
 
         System.out.println("-----Testing dynamic array-----");
         dynamicArrayTesting.createArray();

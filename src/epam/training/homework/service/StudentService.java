@@ -6,7 +6,7 @@ import epam.training.homework.Student;
 
 import java.util.*;
 
-public class StudentsList {
+public class StudentService {
 
     /*creating student objects*/
     public final Student student1 = new Student("Aram", "Gabrielyan", 21);
